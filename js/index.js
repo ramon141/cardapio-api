@@ -21,10 +21,6 @@ function addOptionField(containerId) {
 
 function submit() {
 
-    const content = {
-        data: JSON.stringify(data)
-    };
-
     axios.post('/api/create.php', `data=${JSON.stringify(data)}`)
         .then((response) => {
             alert("Cadastrado com sucesso")
@@ -65,7 +61,7 @@ function saveDatas(id) {
 
 const days = [
     "Segunda-Feira",
-    "Terça-Feira",
+    "Terca-Feira",
     "Quarta-Feira",
     "Quinta-Feira",
     "Sexta-Feira"

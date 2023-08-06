@@ -21,6 +21,9 @@ try {
     // Fecha a conexão com o banco de dados
     $conn = null;
 
+    // Decodifica a string JSON no campo "cardapio"
+    $result['cardapio'] = json_decode($result['cardapio']);
+
     // Retorna o resultado como JSON
     header("Content-Type: application/json");
     echo json_encode($result);
