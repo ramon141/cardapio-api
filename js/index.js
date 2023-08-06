@@ -21,7 +21,7 @@ function addOptionField(containerId) {
 
 function submit() {
 
-    axios.post('/api/create.php', `data=${JSON.stringify(data)}`)
+    axios.post('http://localhost:3009/create', { data: JSON.stringify(data) })
         .then((response) => {
             alert("Cadastrado com sucesso")
         })
